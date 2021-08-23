@@ -96,10 +96,16 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
     const primeirosPares = []
-    for(let i = 0; i < n ;i++){
-
+    const resultadoPares = []
+    for(let i = 0; i < 100 ;i++){
+        if(i % 2 == 0){
+            primeirosPares.push(i)
+        }
     }
-    return primeirosPares
+    for(let i = 0; i < n ; i++){
+        resultadoPares.push(primeirosPares[i])
+    }
+    return resultadoPares
 }
 
 // EXERCÍCIO 09
@@ -213,5 +219,7 @@ function retornaArrayOrdenadoAlfabeticamente(consultas) {
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-   
+    const consultasOrdenadas = [...consultas]
+    consultasOrdenadas.sort((a,b) => (a.dataDaConsulta > b.dataDaConsulta) ? 1 : -1 )
+    return consultasOrdenadas
 }
