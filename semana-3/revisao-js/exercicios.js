@@ -219,7 +219,20 @@ function retornaArrayOrdenadoAlfabeticamente(consultas) {
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-    const consultasOrdenadas = [...consultas]
-    consultasOrdenadas.sort((a,b) => (a.dataDaConsulta > b.dataDaConsulta) ? 1 : -1 )
-    return consultasOrdenadas
+    const gerarData = string => {
+
+        const [dia, mes, ano] = string.split("/")
+  
+        return new Date(`${ano}-${mes}-${dia}`)
+     }
+  
+     const compararDatasDeConsulta = (a, b) => {
+        if (gerarData(a.dataDaConsulta) > gerarData(b.dataDaConsulta)) {
+           return 1
+        } else {
+           return -1
+        }
+     }
+  
+     return consultas.sort(compararDatasDeConsulta)
 }
