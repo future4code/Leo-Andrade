@@ -95,12 +95,24 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-   
+    const primeirosPares = []
+    for(let i = 0; i < n ; i++){
+        
+    }
+    return primeirosPares
 }
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
-
+    if(ladoA === ladoB && ladoA === ladoC && ladoB === ladoC){
+        return ('Equilátero')
+    }
+    if(ladoA === ladoB || ladoA === ladoC || ladoB === ladoC){
+        return ('Isósceles')
+    }
+    if(ladoA !== ladoB && ladoA !== ladoC && ladoB !== ladoC){
+        return ('Escaleno')
+    }
 }
 
 // EXERCÍCIO 10
