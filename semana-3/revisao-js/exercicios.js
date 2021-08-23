@@ -39,17 +39,24 @@ function retornaArrayOrdenado(array) {
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
     const numerosPares = []
-  for(let i = 0 ; i < array.length ; i++){
-      if(array[i] % 2 === 0){
-        numerosPares.push(array[i])
-      }
-  }
-  return numerosPares
+    for(let i = 0 ; i < array.length ; i++){
+        if(array[i] % 2 === 0){
+            numerosPares.push(array[i])
+        }
+    }
+    return numerosPares
 }
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
- 
+    const numerosPares = []
+    for(let i = 0 ; i < array.length ; i++){
+        if(array[i] % 2 === 0){
+            let numeroParElevado = Math.pow(array[i],2)
+            numerosPares.push(numeroParElevado)
+        }
+    }
+    return numerosPares
 }
 
 // EXERCÍCIO 06
