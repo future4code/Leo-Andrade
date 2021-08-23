@@ -96,8 +96,8 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
     const primeirosPares = []
-    for(let i = 0; i < n ; i++){
-        
+    for(let i = 0; i < n ;i++){
+
     }
     return primeirosPares
 }
@@ -117,7 +117,36 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-  
+    const resultadoArray = []
+    const maioresNumeros = []
+    const menoresNumeros = []
+    if(array.length < 3){
+        if(array[0] > array[1]){
+            let aux = array[0]
+            array[0] = array[1]
+            array[1] = aux
+        }
+        resultadoArray.push(array[0])
+        resultadoArray.push(array[1])
+    }
+    else{
+    for( let i = 0; i < array.length ; i++){
+        for(let j = i+1 ; j < array.length; j++){
+            if(array[i] > array[j]){
+                let aux = array[i]
+                array[i] = array[j]
+                array[j] = aux
+            }
+        }
+    }
+    for(let i = 0; i < 2; i++){
+        menoresNumeros.push(array[i])
+        maioresNumeros.push(array.pop())
+    }
+    resultadoArray.push(maioresNumeros[1])
+    resultadoArray.push(menoresNumeros[1])
+    }
+    return resultadoArray
 }
 
 // EXERCÍCIO 11
