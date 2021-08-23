@@ -206,7 +206,9 @@ function retornaContasComSaldoAtualizado(contas) {
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
-  
+    const consultasOrdenadas = [...consultas]
+    consultasOrdenadas.sort((a,b) => (a.nome > b.nome) ? 1 : -1 )
+    return consultasOrdenadas
 }
 
 // EXERCÍCIO 15B
