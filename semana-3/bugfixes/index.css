@@ -173,3 +173,7 @@ button:active{
 #back-button:hover {
     background-color: #635a3d
 }
+input{
+    border:none;
+    border-bottom: 3px solid #fe7e02;
+}
