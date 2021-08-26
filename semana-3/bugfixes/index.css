@@ -9,6 +9,9 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
+li{
+    list-style-position: inside;
+}
 
 h2 {
     background-color: #fe7e02;
@@ -147,15 +150,9 @@ button:active{
     border-radius: 5px;
     font-size: 10px;
     color: black;
-}
-.back-button {
-    background-color: white;
-    width: 100px;
-    height: 20px;
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 10px;
-    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #back-button {
     background-color: white;
@@ -169,6 +166,8 @@ button:active{
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    top: 90%;
+    left: 50%;
 }
 
 #back-button:hover {
