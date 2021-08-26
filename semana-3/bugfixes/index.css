@@ -102,6 +102,7 @@ div img {
 div:nth-child(2),
 div:last-child {
     text-align: center;
+    
 }
 
 table {
