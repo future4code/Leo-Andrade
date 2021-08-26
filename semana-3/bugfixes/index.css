@@ -62,8 +62,12 @@ div img {
 .icone {
     height: 15px;
 }
-
-
+.icone:hover{
+    opacity: 50%;
+}
+.icone:active{
+    opacity: 100%;
+}
 /** 
   *
   *  ESTILOS HOME 
