@@ -23,7 +23,7 @@ function App() {
       </div>
       <div className='page-section-container'>
         <CardPequeno
-          icon='https://img-premium.flaticon.com/png/512/1804/premium/1804925.png?token=exp=1631128665~hmac=7ac8c920a89f19408f2ab4c1f52120dd'
+          icon='https://image.flaticon.com/icons/png/512/1060/1060370.png'
           texto='Email: leo.ramos182@hotmail.com'
         />
         <CardPequeno
@@ -37,7 +37,7 @@ function App() {
           htmlIcon='https://image.flaticon.com/icons/png/512/888/888859.png'
           jsIcon='https://image.flaticon.com/icons/png/512/136/136530.png'
           cssIcon='https://image.flaticon.com/icons/png/512/888/888847.png'
-          reactIcon='https://img-premium.flaticon.com/png/512/1183/premium/1183672.png?token=exp=1631133578~hmac=4c4b9df75ad947a1a07fba11970e49cb'
+          reactIcon='https://image.flaticon.com/icons/png/512/753/753244.png'
         />
       </div>
 
