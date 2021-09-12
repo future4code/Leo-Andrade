@@ -52,7 +52,8 @@ class Post extends React.Component {
     numeroComentarios: 0,
     favorito: false,
     numeroFavoritos: 0,
-    enviando: false
+    enviando: false,
+    comentario: ''
   }
 
   onClickFavorito = () => {
@@ -89,8 +90,9 @@ class Post extends React.Component {
   aoEnviarComentario = () => {
     this.setState({
       comentando: false,
-      numeroComentarios: this.state.numeroComentarios + 1
+      numeroComentarios: this.state.numeroComentarios + 1,
     })
+    console.log(SecaoComentario.teste)
   }
 
   render() {
@@ -117,7 +119,7 @@ class Post extends React.Component {
     let componenteEnviar
 
     if(this.state.comentando) {
-      componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario}/>
+      componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario} post={this.state.comentario}/>
     }
     if(this.state.enviando){
       componenteEnviar = <SecaoEnviar aoEnviar={this.onClickSend}></SecaoEnviar>

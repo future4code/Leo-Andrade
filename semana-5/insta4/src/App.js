@@ -10,6 +10,9 @@ const MainContainer = styled.div`
 `
 
 class App extends React.Component {
+  state = {
+    posts: []
+  }
   render() {
     return (
       <MainContainer>
