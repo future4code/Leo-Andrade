@@ -176,6 +176,16 @@ class App extends React.Component {
     this.setState({clickName: event.name})
     this.setState({showUserDetails: !this.state.showUserDetails})
   }
+  handleKeyDownSearch = (event) => {
+    if(event.key === 'Enter'){
+      this.searchUser(this.state.searchUser)
+    }
+  }
+  handleKeyDownAddUser = (event) => {
+    if(event.key === 'Enter'){
+      this.addUser()
+    }
+  }
   render(){
     const nameList = [...this.state.userNameList].map( (userName) => {
       return <DivName key={userName.id}>
@@ -205,7 +215,8 @@ class App extends React.Component {
             <input id='nomeUser'
               value={this.state.userName}
               placeholder={this.state.inputNamePlaceholder}
-              onChange={this.handleNameUser}/>
+              onChange={this.handleNameUser}
+              onKeyDown={this.handleKeyDownAddUser}/>
             </DivInput>
           <DivButton>
             <button onClick={this.addUser}>{this.state.buttonAddTitle}</button>
@@ -214,9 +225,11 @@ class App extends React.Component {
             <input id='searchUser' 
               value={this.state.searchUser}
               placeholder={this.state.inputSearchPlaceholder}
-              onChange={this.handleSearchUser}/>
+              onChange={this.handleSearchUser}
+              onKeyDown={this.handleKeyDownSearch}/>
             <DivButton>
-              <button className='search' onClick={() => this.searchUser(this.state.searchUser)}>{this.state.buttonSearchTitle}</button>
+              <button className='search' 
+              onClick={() => this.searchUser(this.state.searchUser)}>{this.state.buttonSearchTitle}</button>
             </DivButton>
           </DivInput>
             
