@@ -211,7 +211,8 @@ class App extends React.Component {
             <input id='emailUser' 
               value={this.state.userEmail}
               placeholder={this.state.inputEmailPlaceholder}
-              onChange={this.handleEmailUser}/>
+              onChange={this.handleEmailUser}
+              onKeyDown={this.handleKeyDownAddUser}/>
             <input id='nomeUser'
               value={this.state.userName}
               placeholder={this.state.inputNamePlaceholder}
